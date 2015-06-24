@@ -43,7 +43,7 @@ function responseHandler(req, res) {
       }[opr];
     };
     var result = operate(operator)(parseInt(equation[0]), parseInt(equation[1]));
-    res.write(result);
+    res.write(JSON.stringify(result));
   }
   else if (req.url.match("/Counts/")) {
     wordCount = {
