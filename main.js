@@ -3,6 +3,9 @@ gravatar:
 When your server receives a request sent to  [server url]/gravatarUrl/[email address] , it will accept an email address from the url, and respond with the corresponding Gravatar url.
 calc:
 This endpoint will take accept an arithmetic calculation in the URL, evaluate it, and then return the result.  It will take the form of two numbers with one operator in between them
+count:
+This endpoint will accept a sentence string, and then count up the letters, spaces, and words in that string.  This will be URI encoded (the spaces will be %20s).  To decode it, use decodeURI(). Your server should return an object with all of the required counts.  This object will need to be stringified.
+*/
 
 var fs = require("fs"),
     http = require("http"),
