@@ -1,3 +1,9 @@
+/*
+gravatar:
+When your server receives a request sent to  [server url]/gravatarUrl/[email address] , it will accept an email address from the url, and respond with the corresponding Gravatar url.
+calc:
+This endpoint will take accept an arithmetic calculation in the URL, evaluate it, and then return the result.  It will take the form of two numbers with one operator in between them
+
 var fs = require("fs"),
     http = require("http"),
     request = require('request'),
@@ -52,16 +58,3 @@ function responseHandler(req, res) {
   }
   res.end();
 }
-
-
-
-// exec("df -h", function(err, stdout, stderr) {
-//   console.log(err, stdout, stderr);
-// });
-// exec("vm_stat", function(err, stdout, stderr) {
-//   res.end(stdout.match(/free:\s+(\d+)\./)[1]);
-// });
-//fs.readFile('index.html', 'utf8', function (err,data) {
-//    request('http://points.agilelabs.com'+req.url+'.json', function (error, response, body) {
-//      if (!error && response.statusCode == 200) {
-//        res.end(body);
